@@ -1,29 +1,35 @@
 export default function Div({
-  theme,
+  children,
   direction = "column",
-  gap = "1rem",
-  align = "stretch",
-  justify = "flex-start",
-  padding = "0",
-  background,
-  children
+  gap,
+  align,
+  justify,
+  padding,
+  margin,
+  backgroundColor,
+  width,
+  height,
+  className = "",
 }) {
-  const bg = background?.startsWith("theme.")
-    ? theme[background.replace("theme.", "")]
-    : background;
+  const flexDirection =
+    direction === "row" || direction === "column" ? direction : "column";
+
+  const style = {
+    display: "flex",
+    flexDirection,
+  };
+
+  if (gap) style.gap = gap;
+  if (align) style.alignItems = align;
+  if (justify) style.justifyContent = justify;
+  if (padding) style.padding = padding;
+  if (margin) style.margin = margin;
+  if (backgroundColor) style.backgroundColor = backgroundColor;
+  if (width) style.width = width;
+  if (height) style.height = height;
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: direction,
-        gap,
-        alignItems: align,
-        justifyContent: justify,
-        padding,
-        backgroundColor: bg
-      }}
-    >
+    <div className={className} style={style}>
       {children}
     </div>
   );

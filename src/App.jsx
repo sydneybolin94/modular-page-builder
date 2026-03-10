@@ -37,6 +37,7 @@ export default function App() {
   return (
     <div className="p-8 flex flex-col gap-6">
 
+      {/* INSTRUCTIONS CONTAINER */}
       <div className="text-sm text-gray-800 space-y-3">
         <details className="group border border-gray-200 rounded-md p-3">
           <summary className="cursor-pointer font-semibold text-gray-900 flex items-center justify-between">
@@ -112,13 +113,11 @@ export default function App() {
               </div>
             )}
 
-            {/* THEME PANEL + INSTRUCTIONS (scroll normally with the page) */}
-            <ThemePanel layout={layout} setLayout={setLayout} />
-
             <div className="flex-1 min-h-0 overflow-y-auto border rounded h-dvh">
               <JsonEditor
                 value={rawText}
                 onChange={(e) => setRawText(e.target.value)}
+                
                 height="100%"
               />
             </div>
@@ -132,6 +131,17 @@ export default function App() {
             <PageRender layout={layout} />
           </div>
 
+        </div>
+      </div>
+
+      <div className="editor-container flex gap-8">
+        <div className="left-column">
+          <div className="bg-pink-50 p-8 flex flex-col gap-6">
+              <ThemePanel className="align-bottom" layout={layout} setLayout={setLayout} />
+          </div>
+        </div>
+        <div className="right-column">
+          <div className="bg-red-950 p-8 flex flex-col gap-6"></div>
         </div>
       </div>
 

@@ -9,3 +9,25 @@
   --theme-background: #ffffff;
   --theme-text: #1a1a1a;
 }
+
+.editor-container {
+  overflow: hidden;
+}
+
+.left-column {
+  width: 40%;
+  overflow-y: scroll;
+}
+
+.right-column {
+  width: 60%;
+  overflow-y: scroll;
+}
+
+.left-column div {
+  height: 1200px;
+}
+
+.right-column div {
+  height: 1200px;
+}

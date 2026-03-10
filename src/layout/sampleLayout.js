@@ -1,48 +1,49 @@
 export default {
   "theme": {
-    "primary": "#4f8a8b",
-    "accent": "#a3c4bc",
+    "primary": "#3ac0bc",
+    "accent": "#b89a6f",
     "background": "#ffffff",
-    "text": "#1a1a1a"
+    "text": "#3a2f2a"
   },
 
   "layout": [
-
     {
       "type": "section",
       "props": {
-        "backgroundImage": "https://images.unsplash.com/photo-1767172352170-19b1140dc51f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "padding": "6rem 4rem"
+        "padding": "6rem 2rem",
+        "backgroundImage": "https://images.unsplash.com/photo-1502790671504-542ad42d5189?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "className": "text-center"
       },
       "children": [
         {
-          "type": "div",
+          "type": "header",
           "props": {
-            "direction": "column",
-            "gap": "1.5rem",
-            "align": "center",
-            "justify": "center"
-          },
-          "children": [
-            {
-              "type": "header",
-              "props": {
-                "text": "Build Pages Without the Chaos"
-              }
-            },
-            {
-              "type": "paragraph",
-              "props": {
-                "text": "A simple, modular system that keeps your content clean and your design consistent."
-              }
-            },
-            {
-              "type": "button",
-              "props": {
-                "label": "Start Building"
-              }
-            }
-          ]
+            "text": "Build Pages With Pure JSON",
+            "fontSize": "3rem",
+            "margin": "0 0 1rem 0",
+            "color": "theme.background"
+          }
+        },
+        {
+          "type": "paragraph",
+          "props": {
+            "text": "A modular, flexible page builder powered entirely by JSON-driven components.",
+            "fontSize": "1.25rem",
+            "color": "theme.background",
+            "margin": "0 auto 2rem auto",
+            "width": "60%"
+          }
+        },
+        {
+          "type": "button",
+          "props": {
+            "label": "Start Editing",
+            "padding": "1rem 2rem",
+            "backgroundColor": "theme.primary",
+            "color": "theme.background",
+            "borderRadius": "8px",
+            "margin": "0 auto"
+          }
         }
       ]
     },
@@ -50,8 +51,8 @@ export default {
     {
       "type": "section",
       "props": {
-        "background": "theme.accent",
-        "padding": "4rem"
+        "padding": "4rem 2rem",
+        "backgroundColor": "theme.background"
       },
       "children": [
         {
@@ -59,48 +60,62 @@ export default {
           "props": {
             "direction": "row",
             "gap": "2rem",
-            "align": "flex-start",
-            "justify": "space-between"
+            "align": "center",
+            "justify": "center",
+            "padding": "2rem",
+            "width": "100%"
           },
           "children": [
             {
-              "type": "div",
+              "type": "image",
               "props": {
-                "direction": "column",
-                "gap": "1rem",
-                "flex": 1
-              },
-              "children": [
-                {
-                  "type": "header",
-                  "props": {
-                    "text": "Why Modular Works"
-                  }
-                },
-                {
-                  "type": "paragraph",
-                  "props": {
-                    "text": "Each section is a self-contained component, so you can rearrange, reuse, and iterate without breaking your layout."
-                  }
-                }
-              ]
+                "src": "https://images.unsplash.com/photo-1522199710521-72d69614c702?q=80",
+                "alt": "Workspace",
+                "width": "400px",
+                "height": "300px",
+                "objectFit": "cover",
+                "borderRadius": "12px",
+                "shadow": true
+              }
             },
             {
               "type": "div",
               "props": {
                 "direction": "column",
                 "gap": "1rem",
-                "flex": 1
+                "width": "400px"
               },
               "children": [
                 {
-                  "type": "image",
+                  "type": "header",
                   "props": {
-                    "src": "https://images.unsplash.com/photo-1590545719316-085002117529?q=80&w=1740&auto=format&fit=crop",
-                    "alt": "Workspace",
-                    "rounded": true,
-                    "shadow": true,
-                    "fullWidth": true
+                    "text": "Fully Modular Components",
+                    "fontSize": "2rem",
+                    "color": "theme.accent"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "props": {
+                    "text": "Every component in this builder accepts flexible styling and layout attributes directly from JSON.",
+                    "fontSize": "1rem",
+                    "color": "theme.text"
+                  }
+                },
+                {
+                  "type": "list",
+                  "props": {
+                    "items": [
+                      "Flexible layout primitives",
+                      "Customizable styling",
+                      "Theme-aware components",
+                      "JSON as the single source of truth"
+                    ],
+                    "gap": "0.5rem",
+                    "fontSize": "1rem",
+                    "color": "theme.text",
+                    "listStyle": "disc",
+                    "margin": "1rem 0 0 1rem"
                   }
                 }
               ]
@@ -113,35 +128,51 @@ export default {
     {
       "type": "section",
       "props": {
-        "background": "theme.primary",
-        "padding": "4rem"
+        "padding": "4rem 2rem",
+        "backgroundColor": "theme.accent"
       },
       "children": [
         {
+          "type": "header",
+          "props": {
+            "text": "Call to Action",
+            "fontSize": "2.5rem",
+            "align": "center",
+            "margin": "0 0 1rem 0",
+            "color": "theme.background"
+          }
+        },
+        {
+          "type": "paragraph",
+          "props": {
+            "text": "Ready to build something incredible? Edit the JSON and watch your page update instantly.",
+            "fontSize": "1.125rem",
+            "align": "center",
+            "margin": "0 auto 2rem auto",
+            "width": "60%",
+            "color": "theme.background"
+          }
+        },
+        {
           "type": "div",
           "props": {
-            "direction": "column",
-            "gap": "1rem",
-            "align": "center",
+            "direction": "row",
             "justify": "center"
           },
           "children": [
             {
-              "type": "header",
-              "props": {
-                "text": "Ready to Try It?"
-              }
-            },
-            {
               "type": "button",
               "props": {
-                "label": "Build a Page"
+                "label": "Get Started",
+                "padding": "1rem 2rem",
+                "backgroundColor": "theme.primary",
+                "color": "theme.background",
+                "borderRadius": "8px"
               }
             }
           ]
         }
       ]
-    },
-
+    }
   ]
-};
+}

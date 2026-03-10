@@ -1,8 +1,33 @@
-export default function List({ items = [], className = "" }) {
+export default function List({
+  items = [],
+  gap,
+  fontSize = "1rem",
+  color = "#000000",
+  listStyle = "disc",
+  margin,
+  className = "",
+}) {
+  const style = {
+    fontSize,
+    color,
+    listStyleType: listStyle,
+  };
+
+  if (margin) style.margin = margin;
+
+  const itemStyle = {};
+  if (gap) itemStyle.marginBottom = gap;
+
+  const safeItems = Array.isArray(items)
+    ? items.filter(
+        (item) => typeof item === "string" || typeof item === "number"
+      )
+    : [];
+
   return (
-    <ul className={`list-disc pl-6 space-y-2 ${className}`}>
-      {items.map((item, i) => (
-        <li key={i} className="text-base leading-relaxed">
+    <ul className={className} style={style}>
+      {safeItems.map((item, i) => (
+        <li key={i} style={itemStyle}>
           {item}
         </li>
       ))}

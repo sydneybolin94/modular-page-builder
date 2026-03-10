@@ -1,20 +1,30 @@
-export default function Image({ src, alt = "", width, height, rounded, shadow, fullWidth }) {
-  const classes = [
-    fullWidth ? "w-full" : "",
-    rounded ? "rounded-lg" : "",
-    shadow ? "shadow-lg" : ""
-  ]
-    .filter(Boolean)
-    .join(" ");
+export default function Image({
+  src,
+  alt = "",
+  width,
+  height,
+  objectFit = "cover",
+  borderRadius,
+  shadow,
+  className = "",
+}) {
+  if (!src) return null;
+
+  const style = {
+    objectFit,
+  };
+
+  if (width) style.width = width;
+  if (height) style.height = height;
+  if (borderRadius) style.borderRadius = borderRadius;
+  if (shadow) style.boxShadow = "0 10px 30px rgba(0,0,0,0.15)";
 
   return (
     <img
       src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={classes}
-      style={{ display: "block" }}
+      alt={typeof alt === "string" ? alt : String(alt)}
+      className={className}
+      style={style}
     />
   );
 }

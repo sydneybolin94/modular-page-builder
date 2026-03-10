@@ -6,7 +6,7 @@ export default function ThemePanel({ layout, setLayout }) {
   };
 
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-6 align-bottom">
       <label className="flex items-center gap-2">
         Primary
         <input
