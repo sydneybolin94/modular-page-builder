@@ -134,7 +134,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="editor-container flex gap-8">
+      {/* <div className="editor-container flex gap-8">
         <div className="left-column">
           <div className="bg-pink-50 p-8 flex flex-col gap-6">
               <ThemePanel className="align-bottom" layout={layout} setLayout={setLayout} />
@@ -143,7 +143,7 @@ export default function App() {
         <div className="right-column">
           <div className="bg-red-950 p-8 flex flex-col gap-6"></div>
         </div>
-      </div>
+      </div> */}
 
     </div>
   );
