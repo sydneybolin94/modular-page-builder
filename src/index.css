@@ -31,3 +31,19 @@
 .right-column div {
   height: 1200px;
 }
+
+/* Instructions Button */
+.instructions-button .text-container .show-text {
+  display: none;
+}
+.instructions-button .text-container {
+  font-size: 22px;
+}
+
+/* Instructions Button Hover */
+.instructions-button:hover {
+  width: fit-content;
+}
+.instructions-button:hover .text-container .show-text {
+  display: block;
+}
