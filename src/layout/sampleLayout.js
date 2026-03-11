@@ -59,6 +59,7 @@ export default {
           "type": "div",
           "props": {
             "direction": "row",
+            "flexwrap": true,
             "gap": "2rem",
             "align": "center",
             "justify": "center",
@@ -71,7 +72,8 @@ export default {
               "props": {
                 "src": "https://images.unsplash.com/photo-1522199710521-72d69614c702?q=80",
                 "alt": "Workspace",
-                "width": "400px",
+                "width": "100%",
+                "maxWidth": "400px",
                 "height": "300px",
                 "objectFit": "cover",
                 "borderRadius": "12px",
@@ -83,7 +85,8 @@ export default {
               "props": {
                 "direction": "column",
                 "gap": "1rem",
-                "width": "400px"
+                "width": "100%",
+                "maxWidth": "400px"
               },
               "children": [
                 {

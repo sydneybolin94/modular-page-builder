@@ -79,8 +79,8 @@ const allowedProps = {
   header: ["text", "fontSize", "color", "margin", "align", "className"],
   paragraph: ["text", "fontSize", "color", "margin", "width", "align", "className"],
   button: ["label", "padding", "backgroundColor", "color", "borderRadius", "margin", "className"],
-  image: ["src", "alt", "width", "height", "objectFit", "borderRadius", "shadow", "className"],
-  div: ["direction", "gap", "align", "justify", "padding", "margin", "backgroundColor", "width", "height", "className"],
+  image: ["src", "alt", "width", "height", "objectFit", "borderRadius", "shadow", "className", "maxWidth"],
+  div: ["direction", "gap", "align", "justify", "padding", "margin", "backgroundColor", "width", "height", "className", "flexwrap", "maxWidth"],
   list: ["items", "gap", "fontSize", "color", "listStyle", "margin", "className"],
 };
 

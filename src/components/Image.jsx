@@ -6,6 +6,7 @@ export default function Image({
   objectFit = "cover",
   borderRadius,
   shadow,
+  maxWidth,
   className = "",
 }) {
   if (!src) return null;
@@ -18,7 +19,7 @@ export default function Image({
   if (height) style.height = height;
   if (borderRadius) style.borderRadius = borderRadius;
   if (shadow) style.boxShadow = "0 10px 30px rgba(0,0,0,0.15)";
-
+  if (maxWidth) style.maxWidth = maxWidth;
   return (
     <img
       src={src}
