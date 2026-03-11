@@ -10,28 +10,6 @@
   --theme-text: #1a1a1a;
 }
 
-.editor-container {
-  overflow: hidden;
-}
-
-.left-column {
-  width: 40%;
-  overflow-y: scroll;
-}
-
-.right-column {
-  width: 60%;
-  overflow-y: scroll;
-}
-
-.left-column div {
-  height: 1200px;
-}
-
-.right-column div {
-  height: 1200px;
-}
-
 /* Instructions Button */
 .instructions-button .text-container .show-text {
   display: none;
@@ -46,4 +24,16 @@
 }
 .instructions-button:hover .text-container .show-text {
   display: block;
+}
+
+@media only screen and (max-width: 950px) {
+  .mpb-container {
+    flex-direction: column;
+  }
+  .mpb-container .left-column, .mpb-container .right-column {
+    width: 100%;
+  }
+  .mpb-container .left-column {
+    height: 400px;
+  }
 }

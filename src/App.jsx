@@ -168,10 +168,10 @@ export default function App() {
 
       <p className="text-md mb-1">The Modular Page Builder is a tool for visually designing pages using JSON. Edit the JSON on the left to change the page on the right. Click the <strong>?</strong> button in the top right for more info on how to use it.</p>
       <div className="h-[85vh]  border rounded p-4">
-        <div className="flex gap-8 h-full">
+        <div className="flex gap-8 h-full mpb-container">
 
           {/* LEFT COLUMN — 40% */}
-          <div className="w-[40%] h-full flex flex-col overflow-y-auto">
+          <div className="left-column w-[40%] h-full flex flex-col overflow-y-auto">
             <h2 className="text-lg mb-1 font-bold">JSON Editor</h2>
             <div className="flex justify-end mb-2">
               <InstructionsButton onOpen={() => setOpen(true)} />
@@ -193,7 +193,7 @@ export default function App() {
           </div>
 
           {/* RIGHT COLUMN — 60% */}
-          <div className="w-[60%] h-full overflow-y-auto">
+          <div className="right-column w-[60%] h-full overflow-y-auto">
             <h2 className="text-lg mb-1 font-bold">Page Preview</h2>
             <PageRender layout={layout} />
           </div>
